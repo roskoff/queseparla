@@ -50,13 +50,14 @@ from os import listdir
 
 #==============
 def dataset_from_documents():
+    documents_dir = '../../test/'
     dataset = []
-    for f in listdir("../test/"):
-        dataset += open("../test/" + f, "r")
+    for f in listdir(documents_dir):
+        dataset += open(documents_dir + f, "r")
     return dataset
 #==============
-n_samples = 10000
-n_features = 10000
+n_samples = 5000
+n_features = 5000
 n_topics = 10
 n_top_words = 20
 
