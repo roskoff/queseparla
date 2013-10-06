@@ -50,10 +50,20 @@ from os import listdir
 
 #==============
 def dataset_from_documents():
+    stopwords = open("stopwords_es.txt").read().split('\n')
     documents_dir = '../../test/'
     dataset = []
     for f in listdir(documents_dir):
-        dataset += open(documents_dir + f, "r")
+        content = open(documents_dir + f, "r").read().replace('\n', '').split(' ')
+        content = [y for y in [x for x in content if x != ''] if y.lower() not in stopwords]
+        #print("Content:")
+        #for sw in stopwords:
+            #content = content.replace( ' ' + sw + ' ', '')
+        #    content = [x for x in content if x != sw ]
+        #print(content)
+        joined_content = " ".join(content)
+        #print(joined_content)
+        dataset += [joined_content]
     return dataset
 #==============
 n_samples = 5000
@@ -67,6 +77,8 @@ n_top_words = 20
 t0 = time()
 print("Loading dataset and extracting TF-IDF features...")
 dataset = dataset_from_documents()
+#print("Dataset: \n", dataset)
+
 
 vectorizer = text.CountVectorizer(max_df=0.95, max_features=n_features)
 counts = vectorizer.fit_transform(dataset[:n_samples])
