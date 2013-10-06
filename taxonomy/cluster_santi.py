@@ -55,7 +55,14 @@ def dataset_from_documents():
         for word in content_lower:
             counter[word] += 1
         # Nombre del archivo
-        counter[f] += 10000000
+        new_counter = counter.copy()
+        for e in counter:
+            if counter[e] == 1:
+                del new_counter[e]
+
+        #counter = [x for x in counter if counter]
+        print f
+        new_counter[f] += 10000000
 
         #content = [y for y in [x for x in content if x != ''] if y.lower() not in stopwords]
         #print("Content:")
@@ -66,12 +73,12 @@ def dataset_from_documents():
         #joined_content = " ".join(content)
         #print(joined_content)
         #dataset += [joined_content]
-        dataset += [dict(counter.most_common(15))]
+        dataset += [dict(new_counter.most_common(15))]
     return dataset
 
 
 #data = [{"casa" : 3, "ambiente" : 2},{"casa" : 1, "pajaro" : 2},{"casa" : 1, "pajaro" : 2}]
 data = dataset_from_documents()
 cl = HierarchicalClustering(data, lambda x,y: distance(x,y))
-print cl.getlevel(10)     # get clusters of items closer than 10
+print cl.getlevel(3)     # get clusters of items closer than 10
 #print cl.getlevel(4)      # get clusters of items closer than 5
