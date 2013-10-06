@@ -67,9 +67,9 @@ def dataset_from_documents():
     return dataset
 #==============
 n_samples = 5000
-n_features = 5000
+n_features = 500
 n_topics = 10
-n_top_words = 20
+n_top_words = 10
 
 # Load the 20 newsgroups dataset and vectorize it using the most common word
 # frequency with TF-IDF weighting (without top 5% stop words)
