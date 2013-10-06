@@ -355,3 +355,9 @@ paraguay
 pais
 proyecto
 presidente
+parcialmente
+totalmente
+dicho
+establece
+ministerios
+ministerio
