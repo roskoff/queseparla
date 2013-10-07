@@ -11,7 +11,7 @@ import MySQLdb
 
 
 
-db = MySQLdb.connect(host="mysql.tedic.org", user="user_queseparla", passwd="6I2ASbhptmytnfbL",db="queseparla", charset = "utf8", use_unicode = True)
+db = MySQLdb.connect(host="localhost", user="root", passwd="toor",db="queseparla", charset = "utf8", use_unicode = True)
 
 def guardarBD(texto,hora):
 	x = db.cursor()
