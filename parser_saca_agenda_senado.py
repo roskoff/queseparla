@@ -56,7 +56,7 @@ for agendas in js:
 				txt_agenda=txt_agenda+line+"\n" # VAMOS CARGANDO EL TEXTO DE LA AGENDA
 				hora=re.search(r'(?:\d{1,2}[:,.]\d{1,2})',txt_agenda) # BUSCAMOS LA HORA EN QUE SE LLEVARA A CABO
 				if hora:
-					txt_agenda=txt_agenda.replace(r'(?:\d{1,2}[:,.]\d{1,2})','').replace('hs.','').replace(':','').replace('  ','').replace("\t",'') # LIMPIAMOS EL TEXTO DE LA AGENDA
+					txt_agenda=txt_agenda.replace(r'(?:\d{1,2}[:,.][0-5]?\d)','').replace('hs.','').replace(':','').replace('  ','').replace("\t",'') # LIMPIAMOS EL TEXTO DE LA AGENDA
 					if(hora_evento!=hora.group(0)): # SI ES UNA HORA NUEVA QUE NO LEI ANTERIORMENTE
 						hora_evento=hora.group(0)
 						hora_evento=hora_evento.replace('.',':') # FORMATEAMOS CORRECTAMENTE LA HORA
