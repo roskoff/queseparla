@@ -1,0 +1,35 @@
+ERROR [2013-10-04T18:25:50-04:00] exception 'ErrorException' with message 'include_once(header.inc.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory' in /home/vigilante_medios/observatorio-medios.tedic.org/templates/documentacion.php:3
+Stack trace:
+#0 /home/vigilante_medios/observatorio-medios.tedic.org/templates/documentacion.php(3): Slim\Slim::handleErrors(2, 'include_once(he...', '/home/vigilante...', 3, Array)
+#1 /home/vigilante_medios/observatorio-medios.tedic.org/templates/documentacion.php(3): include_once()
+#2 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/View.php(272): require('/home/vigilante...')
+#3 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/View.php(252): Slim\View->render('documentacion.p...')
+#4 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/View.php(242): Slim\View->fetch('documentacion.p...')
+#5 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Slim.php(744): Slim\View->display('documentacion.p...')
+#6 /home/vigilante_medios/observatorio-medios.tedic.org/index.php(69): Slim\Slim->render('documentacion.p...')
+#7 [internal function]: {closure}()
+#8 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#9 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Slim.php(1305): Slim\Route->dispatch()
+#10 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#11 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#12 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#13 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#14 /home/vigilante_medios/observatorio-medios.tedic.org/index.php(243): Slim\Slim->run()
+#15 {main}
+ERROR [2013-10-04T18:41:52-04:00] exception 'RedBean_Exception_Security' with message 'Identifier does not conform to RedBeanPHP security policies.' in /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php:3102
+Stack trace:
+#0 /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php(3198): RedBean_QueryWriter_AQueryWriter->check('SELECT * FROM (...')
+#1 /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php(3275): RedBean_QueryWriter_AQueryWriter->esc('SELECT * FROM (...')
+#2 /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php(6000): RedBean_QueryWriter_AQueryWriter->queryRecord('SELECT * FROM (...', Array, NULL, Array)
+#3 /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php(8708): RedBean_OODB->find('SELECT * FROM (...', Array, NULL, Array)
+#4 /home/vigilante_medios/observatorio-medios.tedic.org/redbean/rb.php(9615): RedBean_Finder->find('SELECT * FROM (...', NULL, Array)
+#5 /home/vigilante_medios/observatorio-medios.tedic.org/index.php(78): RedBean_Facade::find('SELECT * FROM (...')
+#6 [internal function]: {closure}()
+#7 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Route.php(436): call_user_func_array(Object(Closure), Array)
+#8 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Slim.php(1305): Slim\Route->dispatch()
+#9 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/Flash.php(85): Slim\Slim->call()
+#10 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/MethodOverride.php(92): Slim\Middleware\Flash->call()
+#11 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Middleware/PrettyExceptions.php(67): Slim\Middleware\MethodOverride->call()
+#12 /home/vigilante_medios/observatorio-medios.tedic.org/Slim/Slim.php(1254): Slim\Middleware\PrettyExceptions->call()
+#13 /home/vigilante_medios/observatorio-medios.tedic.org/index.php(253): Slim\Slim->run()
+#14 {main}

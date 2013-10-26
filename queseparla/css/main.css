@@ -1,0 +1,117 @@
+/* Basics tags
+----------------------------------------------- */
+
+
+
+/* Structure tags
+----------------------------------------------- */
+	/* NavBar
+	----------------------------------------------- */
+	.navbar{
+		background: #23c0db;
+		border-bottom: 1px solid #3995aa;
+	}
+
+	.navbar-brand {
+		color: #fff;
+	}
+	.navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus{
+		background: #75cfe7;
+		color: #fff;
+		font-weight: bolder
+	}
+	.navbar-nav li a{
+		color: #fff
+	}
+	.navbar-brand{
+		max-width: 150px
+	}
+
+	.navbar-brand img{
+		width: 100%
+	}
+	.navbar-nav>li>a {
+		padding-top: 21px;
+		padding-bottom: 21px
+	}
+	.navbar-nav>.open>a, .navbar-nav>.open>a:hover, .navbar-nav>.open>a:focus{
+		background: #75cfe7;
+		color: #fff
+	}
+	.navbar-nav>.open>a:focus{
+		background: #74bdce;
+
+	}
+	.navbar-nav>li>.dropdown-menu li a{
+		color: #444
+	}
+
+	/* 
+	----------------------------------------------- */
+	
+
+	@media screen and (max-width: 768px){
+		h1{
+			font-size: 1.2em
+		}
+		.navbar-ex1-collapse{
+			background: #acdae5;
+		}
+		.navbar-nav .open .dropdown-menu{
+			background: #eee
+		}
+		.navbar{ margin-bottom: 0px}
+		.navbar-nav .open .dropdown-menu li{
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			padding: 5px 0
+		}
+		.navbar-form{
+			background: #75cfe7;
+			border: rgba(0,0,0,0.4)
+		}
+		.navbar-nav>li>a{
+			color: #444;
+			border-bottom: 1px solid rgba(255,255,255,0.3);
+
+		}
+
+		.hoy{
+			background: #ececec;
+			color: #a1a1a1; text-align: center;
+		}
+		.hoy h1{
+			margin:0px;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			padding: 10px 0
+		}
+
+		.nav-congresistas li a{
+			color: #fff; text-align: center; text-transform: uppercase;
+		}
+		.nav-congresistas li:first-child{
+			background:#2193ad;
+			width: 49.6%;
+			display: inline-block;
+		}
+
+		.nav-congresistas li:last-child{
+			background:#5ac7e0;
+			width: 49.5%;
+			display: inline-block;
+		}
+
+		/* Lista de temas
+		----------------------------------------------- */
+
+		.lista-temas {
+			margin: 0px;
+			padding: 0px
+		}
+		.lista-temas li{
+			padding: 10px 0;
+			border-bottom: 1px solid #ececec;
+			list-style: none;
+		}
+	}
+	}
